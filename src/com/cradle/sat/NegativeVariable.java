@@ -10,7 +10,7 @@ package com.cradle.sat;
 public class NegativeVariable implements Var {
   private Boolean variable;
 
-  public NegativeVariable(boolean b) {
+  public NegativeVariable(Boolean b) {
     variable = b;
   }
 

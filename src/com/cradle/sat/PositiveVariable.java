@@ -14,7 +14,7 @@ public class PositiveVariable implements Var {
    */
   private Boolean variable;
 
-  public PositiveVariable(boolean b) {
+  public PositiveVariable(Boolean b) {
     variable = b;
   }
 
