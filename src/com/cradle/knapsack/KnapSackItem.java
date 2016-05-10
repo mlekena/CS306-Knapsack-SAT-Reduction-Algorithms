@@ -8,9 +8,15 @@ package com.cradle.knapsack;
  *
  */
 public interface KnapSackItem {
-  public <T extends Number> T value();
+  public int value();
 
-  public <T extends Number> T cost();
+  public int cost();
 
-  public <T extends Number> T valuePerCost();
+  public double valuePerCost();
+  
+  public void setAlternateValue(int value);
+  
+  public void useAlternateValue();
+  
+  public void useOriginalValue();
 }
