@@ -57,10 +57,13 @@ public class Main {
     dataAnalysis(dynamKnap);
     System.out.println("MinCost Dynamic Programming Knapsack Solutions");
     System.out.println(minCostKnap);
+    dataAnalysis(minCostKnap);
     System.out.println("Greedy 2-approximation Knapsack Solutions");
     System.out.println(greedyKnap);
+    dataAnalysis(greedyKnap);
     System.out.println("Fully Polynomial Time Approximation KnapSack Solutions");
     System.out.println(polyKnap);
+    dataAnalysis(polyKnap);
     
    /* int length = 10;
     int budget_target = 20;
@@ -96,6 +99,13 @@ public class Main {
   private static void dataAnalysis(ArrayList<Integer> dataPoints){
     Collections.sort(dataPoints);
     System.out.println("MIN = " + dataPoints.get(0));
-    System.out.println("Max = " + dataPoints.get(dataPoints.size()));
+    System.out.println("Max = " + dataPoints.get(dataPoints.size()-1));
+    System.out.println("Median = " + dataPoints.get(dataPoints.size()/2));
+    int sum = 0;
+    for (int i = 0; i < dataPoints.size(); i++){
+      sum += dataPoints.get(i);
+    }
+    System.out.println("Average = " + (sum/dataPoints.size()));
+    System.out.println();
   }
 }
