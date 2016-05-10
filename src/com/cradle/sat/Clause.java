@@ -10,27 +10,27 @@ import java.util.Arrays;
  *
  */
 public class Clause {
-  private Var[] variables;
+  private VariableNode[] variables;
 
-  public Clause(Var[] v) {
+  public Clause(VariableNode[] v) {
     variables = v;
   }
 
-  public static Clause negPosNegFactory() {
+/*  public static Clause negPosNegFactory() {
     return new Clause(
-        new Var[] {new NegativeVariable(), new PositiveVariable(), new NegativeVariable()});
+        new VariableNode[] {new NegativeVariable(), new PositiveVariable(), new NegativeVariable()});
   }
 
   public static Clause posNegPosFactory() {
     return new Clause(
-        new Var[] {new PositiveVariable(), new NegativeVariable(), new PositiveVariable()});
+        new VariableNode[] {new PositiveVariable(), new NegativeVariable(), new PositiveVariable()});
   }
-
+*/
   public boolean satisfied() {
     return variables[0].value() && variables[1].value() && variables[2].value();
   }
 
-  public void flip(int index) {
+/*  public void flip(int index) {
     variables[index].flip();
   }
 
@@ -40,13 +40,13 @@ public class Clause {
 
   public void setFalse(int index) {
     variables[index].setFalse();
-  }
+  }*/
   
   public int length(){
     return variables.length;
   }
   
-  public Var[] getVariables(){
+  public VariableNode[] getVariables(){
     return variables;
   }
 
@@ -56,9 +56,9 @@ public class Clause {
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();
-    builder.append("Clause [variables=");
+    builder.append("<");
     builder.append(Arrays.toString(variables));
-    builder.append("]" + System.lineSeparator());
+    builder.append(">" + System.lineSeparator());
     return builder.toString();
   }
   

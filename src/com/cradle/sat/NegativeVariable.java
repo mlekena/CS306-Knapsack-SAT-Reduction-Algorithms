@@ -25,7 +25,7 @@ public class NegativeVariable implements Var {
 
   @Override
   public String toString() {
-    return "-var:{" + variable.toString() + "} ";
+    return "-var:{" + value() + "} ";
   }
 
   @Override
